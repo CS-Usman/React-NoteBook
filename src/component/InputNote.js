@@ -17,13 +17,14 @@ function InputNote(props){
     }
 
     return(
-        <div>
-            <input name="heading"type = "text" value = {note.heading} onChange = {handleChange} placeholder="Title"/>
-            <textarea name="content" value = {note.content} onChange={handleChange} placeholder="Take a note..."></textarea>
-            <button onClick={()=>{
-                props.Add(note);
-            }}>Add</button>
-        </div>
+        <form>
+                <input className="inputBox" name="heading"type = "text" value = {note.heading} onChange = {handleChange} placeholder="Title"/>
+                <textarea className="inputBox" name="content" value = {note.content} onChange={handleChange} placeholder="Take a note..."></textarea>
+                <button onClick={(event)=>{
+                    event.preventDefault();
+                    props.Add(note);
+                }}>Add</button>
+        </form>
     );
 }
 

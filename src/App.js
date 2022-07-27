@@ -3,25 +3,41 @@ import Header from "./component/Header";
 import Note from "./component/Note";
 import Footer from "./component/Footer";
 import InputNote from "./component/InputNote";
+import './css/styles.css';
+import './css/inputNote.css';
+import './css/note.css';
 
 function App(){
     const[notesArr,setNotesArr] = useState([]);
-    let addnote = (note) =>{
+    let addNote = (note) =>{
         setNotesArr((prevValue) => {
             return[...prevValue,note];
         });
         
     };
 
+    let deleteNote= (id) => {
+        setNotesArr((notesArr)=>{
+            return notesArr.filter((item,index)=>{
+                return index !== id
+            });
+        });
+    }
+
     return(
         <div>
             <Header />
-            <div>
-                <InputNote Add={addnote} />
+            <div className="input">
+                <InputNote Add={addNote} />
             </div>
-            <div>
-                {notesArr.map((note) =>(
-                    <Note everyNote={note}/>
+            <div className="gridContainer">
+                {notesArr.map((note,index) =>(
+                    <Note 
+                    everyNote={note}
+                    key = {index}
+                    id={index}
+                    delete={deleteNote}
+                    />
                 ))}
             </div>
             <Footer />

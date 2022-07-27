@@ -3,9 +3,12 @@ import React from "react";
 
 function Note(props) {
     return(
-        <div>
-            <h1>{props.everyNote.heading}</h1>
-            <p>{props.everyNote.content}</p>
+        <div className="note">
+            <h3 className="title">{props.everyNote.heading}</h3>
+            <p className="content">{props.everyNote.content}</p>
+            <button onClick={()=>{
+                props.delete(props.id);
+            }}>DELETE</button>
         </div>
     );
 
