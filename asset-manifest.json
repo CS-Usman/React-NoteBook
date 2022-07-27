@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CS-Usman/React-NoteBook/static/css/main.219fd61d.css",
+    "main.js": "/CS-Usman/React-NoteBook/static/js/main.bc851d69.js",
+    "index.html": "/CS-Usman/React-NoteBook/index.html",
+    "main.219fd61d.css.map": "/CS-Usman/React-NoteBook/static/css/main.219fd61d.css.map",
+    "main.bc851d69.js.map": "/CS-Usman/React-NoteBook/static/js/main.bc851d69.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.219fd61d.css",
+    "static/js/main.bc851d69.js"
+  ]
+}
